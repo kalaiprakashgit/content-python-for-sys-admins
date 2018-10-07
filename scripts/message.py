@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/env python
 
 message = raw_input("Enter the message : ")
 count = raw_input("Number of repeats: ").strip()
