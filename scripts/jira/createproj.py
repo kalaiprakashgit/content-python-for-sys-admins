@@ -1,6 +1,5 @@
 #!/usr/bin/env python
 
-# importing the requests library
 import sys
 import requests
 import json
@@ -21,7 +20,7 @@ projecttype = {
      'kanban' : 10702
 }
 projectid = str(projecttype[args.type])
-
+print(projectid)
 
 # defining the api-endpoint
 API_URL = "https://dot-jira-d.lilly.com/rest/project-templates/1.0/createshared/"
@@ -32,12 +31,12 @@ headers = {
 }
 
 data1 = {
-    'key': 'NEWKY1234',
+    'key': 'NEWK145',
     'lead': 'c261779',
-    'name': 'NEWPROJAME123'
+    'name': 'NEWPROJAM145'
 }
 
-response = requests.post(url=API_ENDPOINT, headers=headers, auth=('pkalaiadmin', 'lilly1234'), data=json.dumps(data1))
+response = requests.post(url=API_ENDPOINT, headers=headers, auth=('pkalaiadmin', 'xx'), data=json.dumps(data1))
 
 if response.status_code == 400:
     print ("JIRA Project already exists")
